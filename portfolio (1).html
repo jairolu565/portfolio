@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Josefin Slab', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #cfcfcf;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .header-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: inline-block;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        svginsta {
+            width: 50px;
+            height: 50px;
+            transition: fill 0.3s ease;
+            cursor: pointer;
+        }
+        svginsta:hover {
+            fill: #007bff; /* Cor do ícone ao passar o mouse */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #cfcfcf;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        nav a.active {
+            background-color: #b8b8b8;
+        }
+        .content {
+            padding: 20px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .illustration {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .illustration .image-container {
+            position: relative;
+            overflow: hidden;
+            max-height: 5000px;
+        }
+        .illustration img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            padding: 5px;
+            object-fit: cover;
+            object-position: center;
+            box-sizing: border-box;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .gallery .image-container {
+            position: relative;
+            overflow: hidden;
+            max-height: 600px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            padding: 5px;
+            object-fit: cover;
+            object-position: center;
+            box-sizing: border-box;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+            }
+            .illustration {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jairo Luigi</h1>
+        <p>
+            Fotógrafo e Designer
+        </p>
+    </header>
+    <nav>
+        <a href="#" class="tab-link active" data-tab="home">Inicial</a>
+        <a href="#" class="tab-link" data-tab="about">Sobre Mim</a>
+        <a href="#" class="tab-link" data-tab="contact">Contato</a>
+    </nav>
+    <div class="content">
+        <div id="home" class="tab-content active">
+            <div class="gallery">
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/19cc72178552739.64e9fa573375f.jpg" alt="Foto 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/3fe879176387019.64c429664d89f.jpeg" alt="Foto 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/4233ee178552739.64e9fa5735121.jpg" alt="Foto 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/9558b4178552739.64e9fa5731fec.jpg" alt="Foto 4">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/362015178552739.64e9fa57398b3.jpg" alt="Foto 5">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/544f68178552739.64e9fa5737b18.jpg" alt="Foto 6">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/9baf1f176416625.64c424c1c08d8.jpg" alt="Foto 7">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/893635178552739.64e9fa5731297.jpg" alt="Foto 8">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/ccbba0178552739.64e9fa5735e37.jpg" alt="Foto 9">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/71ec7d176386809.64c3b770222ed.jpeg" alt="Foto 10">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/ba7d54176386809.64c3b77023676.jpeg" alt="Foto 11">
+                </div>
+                <div class="image-container">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a5b91d176386809.64c3b7702508d.jpeg" alt="Foto 12">
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="tab-content">
+            <div class="contact-form">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea rows="5" placeholder="Deixe uma mensagem bacana :)" required></textarea>
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+        <div id="about" class="tab-content">
+            <div class="center">
+                <img src="https://mir-s3-cdn-cf.behance.net/user/276/beb075194725553.627c6ad709b89.jpg" alt="Foto 16" style="border-radius: 50%; display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <a href="https://www.instagram.com/jairoluigi/">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" class="svginsta">
+                    <g>
+                        <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                    </g>
+                </svg>
+                </a>
+                <div style="text-align: center;">
+                    <p style="font-size: 25px; font-weight: 600; margin: 0; align-items: center;">  Jairo Luigi de Oliveira</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4808 -20688 14.286 20" class="svg" style="flex-shrink: 0; margin-right: 10px;">
+                    <g>
+                        <path d="M-4800.857-20688a7.143 7.143 0 0 0-7.143 7.143c0 5.714 7.143 12.857 7.143 12.857s7.143-7.143 7.143-12.857a7.142 7.142 0 0 0-7.143-7.143zm0 10a2.857 2.857 0 1 1 2.857-2.859 2.858 2.858 0 0 1-2.857 2.859z"></path>
+                    </g>
+                </svg>
+                <div style="text-align: center;">
+                    <p style="margin: 0;">Salvador, Bahia - Brasil</p>
+                </div>
+            </div>
+            <p>
+                <p style="text-align: center; font-size: 20px;">
+                    Fotógrafo e designer amador nas horas vagas, apaixonado por contar histórias capturando momentos e criando imagens como forma de me expressar.
+                </p>
+            <div class="illustration">
+                    <div class="image-container">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/1c00d3161424131.63c55b6bae5cd.png" alt="Foto 13">
+                    </div>
+                    <div class="image-container">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3b3776143535021.627c1de250e53.jpg" alt="Foto 14">
+                    </div>
+                    <div class="image-container">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/5ab65b143549103.627c6a0fdd14d.jpg" alt="Foto 15">
+                    </div>
+            </div>
+            </div>
+            
+        
+    <script>
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
+                
+                this.classList.add('active');
+                document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+    </script>
+    <svg style="display:none;">
+        <symbol id="instagram-unauth-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.31-3.608C4.518 2.499 5.785 2.225 7.151 2.163 8.417 2.105 8.797 2.163 12 2.163zm0-2.163C8.756 0 8.334.014 7.053.072 5.772.13 4.517.36 3.5 1.375 2.483 2.391 2.254 3.646 2.196 4.927 2.138 6.208 2.124 6.63 2.124 10s.014 3.792.072 5.073c.058 1.281.287 2.536 1.303 3.552.016.016.03.03.045.045 1.016 1.016 2.271 1.245 3.552 1.303 1.281.058 1.703.072 5.073.072s3.792-.014 5.073-.072c1.281-.058 2.536-.287 3.552-1.303.015-.015.029-.03.045-.045 1.016-1.016 1.245-2.271 1.303-3.552.058-1.281.072-1.703.072-5.073s-.014-3.792-.072-5.073c-.058-1.281-.287-2.536-1.303-3.552-.015-.015-.03-.029-.045-.045-1.016-1.016-2.271-1.245-3.552-1.303-1.281-.058-1.703-.072-5.073-.072zm0 5.838c-3.4 0-6.162 2.761-6.162 6.162S8.6 20.325 12 20.325s6.162-2.761 6.162-6.162-2.761-6.162-6.162-6.162zm0 10.324c-2.298 0-4.162-1.864-4.162-4.162s1.864-4.162 4.162-4.162 4.162 1.864 4.162 4.162-1.864 4.162-4.162 4.162zm6.406-11.842c-.796 0-1.442.646-1.442 1.442s.646 1.442 1.442 1.442 1.442-.646 1.442-1.442-.646-1.442-1.442-1.442z"/>
+        </symbol>
+    </svg>
+</body>
+</html>
